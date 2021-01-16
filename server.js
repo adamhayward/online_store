@@ -1,8 +1,8 @@
-// TESTING FOR GIT HUB
+// TESTING FOR GIT HUB 2
 
 // Requiring necessary npm packages
-const express = require("express");
-const session = require("express-session");
+// const express = require("express");
+// const session = require("express-session");
 // Requiring passport as we've configured it
 const passport = require("./config/passport");
 
