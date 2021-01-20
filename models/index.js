@@ -1,5 +1,5 @@
 "use strict";
-
+require('dotenv').config();
 var fs = require("fs");
 var path = require("path");
 var Sequelize = require("sequelize");
@@ -18,6 +18,7 @@ if (config.use_env_variable) {
     config
   );
 }
+console.log(config.password);
 
 fs.readdirSync(__dirname)
   .filter(function(file) {
