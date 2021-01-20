@@ -20,8 +20,26 @@ seller pushes to invetory
 
 
 db
-inventory 
+inventory table
+
+orders table
+
+
+Tables
+
+View Store
+(stores inventory)
+
+Order Form
+(stores item(s) selected & client data)
+
+Order Processed
+(updates invorry)
 
 
 
 
+
+
+
+Test Test
