@@ -1,5 +1,5 @@
 // exports "ORDER (FORM)" table
-module.exports = (sequelize, DataTypes) {
+module.exports = (sequelize, DataTypes) => {
     const Order = sequelize.define("Order", {
         // proceeding to define cols:
         firstName: {
