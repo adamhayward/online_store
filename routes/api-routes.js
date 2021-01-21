@@ -56,21 +56,39 @@ module.exports = (app) => {
       res.json(dbInventory);
     });
   });
-  // TODO assign logic to "add to cart button" that takes
-  // id from INVENTORY, moves it to CART
-  app.get("/api/inventorys/:id", (req, res) => {
-    db.Inventory.findOne({where: {id: req.params.id}})
-    .then((dbInventory)=> {
-      res.json(dbInventory);
-    })
-  })
 
-  app.post("/api/carts", (req, res) =>{
+  app.get("/api/inventorys/:id", (req, res) => {
+    db.Inventory.findOne({ where: { id: req.params.id } }).then(
+      (dbInventory) => {
+        res.json(dbInventory);
+      }
+    );
+  });
+
+  app.post("/api/carts", (req, res) => {
     console.log(req.body);
     db.Cart.create({
-      total: req.body.total
+      total: req.body.total,
     }).then((dbCart) => {
       res.json(dbCart);
-    })
-  })
+    });
+  });
+
+  app.post("/api/Orders", (req, res) => {
+    console.log(req.body);
+    db.Order.create({
+      firstName: req.body.fistName,
+      astName: req.body.firstName,
+      streetAddress: req.body.streetAddress,
+      city: req.body.city,
+      state: req.body.state,
+      zipCode: req.body.zipCode,
+      ccBrand: req.body.ccBrand,
+      ccNum: req.body.ccNum,
+      ccExpirationDate: req.body.ccExpirationDate,
+      ccCVV: req.body.ccCVV,
+    }).then((dbOrder) => {
+      res.json(dbOrder);
+    });
+  });
 };
