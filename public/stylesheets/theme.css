@@ -1,3 +1,5 @@
+/* This style sheet holds overall page website theme for all pages*/
+/* ______________________________________________________________ */
 /* navbar & nav component styling */
 nav {
   min-height: 100px;
@@ -9,7 +11,7 @@ nav {
   font-size: 48px;
 }
 /* RED text in logo*/
-.logoRed {
+.logoRed, button {
   color: red;
 }
 .nav-link {
