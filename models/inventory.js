@@ -1,3 +1,5 @@
+const { DataTypes } = require("sequelize/types");
+const { sequelize } = require(".");
 // exports "Inventory" table
 module.exports = (sequelize, DataTypes) => {
   const Inventory = sequelize.define("Inventory", {

@@ -1,3 +1,4 @@
+const moment = require("moment");
 // exports "ORDER (FORM)" table
 module.exports = (sequelize, DataTypes) => {
   const Order = sequelize.define("Order", {

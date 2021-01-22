@@ -1,6 +1,7 @@
 // Requiring our models and passport as we've configured it
 const db = require("../models");
 const passport = require("../config/passport");
+const inventory = require("../models/inventory");
 
 module.exports = (app) => {
   // Using the passport.authenticate middleware with our local strategy.
@@ -50,21 +51,25 @@ module.exports = (app) => {
       });
     }
   });
+
+  // NEW CODE STARTS HERE:
   // route to view store
   app.get("/api/inventorys", (req, res) => {
     db.Inventory.findAll().then((dbInventory) => {
       res.json(dbInventory);
     });
   });
+  //route to view the "shopping cart" populated with data from Inventory table
 
-  app.get("/api/inventorys/:id", (req, res) => {
+  // make into a post to have access to the body, include user id in the body, find
+  app.get("/api/cart/:id", (req, res) => {
     db.Inventory.findOne({ where: { id: req.params.id } }).then(
       (dbInventory) => {
         res.json(dbInventory);
       }
     );
   });
-
+  // route to input the total from "shopping cart" and inputs it into Cart table
   app.post("/api/carts", (req, res) => {
     console.log(req.body);
     db.Cart.create({
@@ -73,8 +78,8 @@ module.exports = (app) => {
       res.json(dbCart);
     });
   });
-
-  app.post("/api/Orders", (req, res) => {
+  // route to input the "order form" into the Order table
+  app.post("/api/order", (req, res) => {
     console.log(req.body);
     db.Order.create({
       firstName: req.body.fistName,
