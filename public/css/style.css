@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   margin: 0;
 }
@@ -49,3 +50,46 @@ footer {
   border: black 2px solid;
   min-height: calc(100vh - 350px);
 }
+=======
+header {
+  /* position: absolute; */
+  width: 100%;
+  height: 200px;
+  background-color: yellow;
+}
+nav {
+  /* position:relative;
+  left: 60%; */
+}
+/* logo styling */
+#logo {
+  font-size: 48px;
+}
+/* RED */
+#logoRed {
+  color: red;
+}
+/* Nav link poitoning: */
+/* #homeButton {
+    position: absolute;
+    top: 30px;
+    right: 25%;
+} */
+
+/* page title */
+h2 {
+  
+  margin-top: 10px;
+  /* background-color: lightblue; */
+  height: 75px;
+  text-align: center;
+  font-size: 48px;
+}
+
+footer {
+  height: 100px;
+  text-align: center;
+  border-top: solid black 5px;
+  background-color: chartreuse;
+}
+>>>>>>> 335fb738af8caca88984a8eb021136e62786a1ac
