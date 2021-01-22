@@ -4,72 +4,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Store</title>
+    <title>&lt;code>RED | online store</title>
+    <link rel="icon" href="./img/favicon.png" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-        crossorigin="anonymous"></script>
 </head>
-
 <body>
-    <!-- navigation  -->
-    <header class="d-flex flex-column flex-sm-row align-items-center mr-auto">
-        <h1 id="logo">&lt;code><span id="logoRed">RED</span></h1>
-        <nav class="navbar nav ml-auto flex-sm-row">
-            <a class="nav-item" href="#" style="background-color: aqua;margin: 10px;">Home</a>
-            <a class="nav-item" href="#" style="background-color: aqua;margin: 10px;">Store</a>
-            <a class="nav-item" href="#" style="background-color: aqua;margin: 10px;">Cart</a>
-        </nav>
-    </header>
-    <!-- "body" -->
-    <div class="container">
-        <!-- row 1 -->
-        <div class="row">
-            <div class="col-12">
-                <h2>(Page Title)</h2>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <h1 id="logo">&lt;code><span class="logoRed">RED</span></h1>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navCollapse">
+                <i class="fa fa-bars"></i>
+            </button>
+            <!-- collapsed navbar -->
+            <div class="collapse navbar-collapse" id="navCollapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#">Store</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="#">Cart</a>
+                    </li>
+                </ul>
             </div>
         </div>
-        <!-- row 2 -->
+    </nav>
+    <!-- main content  -->
+    <div class="container content">
+        <!-- row 1 (Page Title)-->
         <div class="row">
-            <div class="row">
-                <div class="col">
-                    <div>
-                        <!-- page content -->
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
-                              Default checkbox
-                            </label>
-                          </div>
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                            <label class="form-check-label" for="flexCheckChecked">
-                              Checked checkbox
-                            </label>
-                          </div>
-                    </div>
-                </div>
+            <div class="col-12">
+                <h3>Page Title</h3>
             </div>
+        </div>
+        <!-- row 2 (Main content for page)-->
+        <div id="mainContent">
+           
         </div>
     </div>
 
-    <footer class="container-fluid mt-4">
+    <footer>
         <!-- row 1 -->
         <div class="row">
-            <div class="col-4 offset-4">
-                <h6>Designed & Coded By:</h6>
-            </div>
-        </div>
-        <!-- row 2 -->
-        <div class="row">
-            <div class="col-4 offset-4">
-                <h6>Team Red</h6>
+            <div class="col-4 offset-4 mt-2">
+                <h6>Designed & Coded By:<br>&lt;team><span class="logoRed">RED</span></h6>
             </div>
         </div>
     </footer>
-
+    <!-- refences to js scripts from bootstrap CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>›
