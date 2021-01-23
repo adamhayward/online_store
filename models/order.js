@@ -36,7 +36,7 @@ module.exports = (sequelize, DataTypes) => {
       },
     },
     zipCode: {
-      type: DataTypes.NUMBER,
+      type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
         len: [5, 11],
@@ -60,7 +60,7 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
     },
     ccCVV: {
-      type: DataTypes.NUMBER,
+      type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
         len: [3],

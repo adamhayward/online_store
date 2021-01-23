@@ -54,7 +54,7 @@ module.exports = (app) => {
 
   // NEW CODE STARTS HERE:
   // route to view store
-  app.get("/api/inventorys", (req, res) => {
+  app.get("/api/inventory", (req, res) => {
     db.Inventory.findAll().then((dbInventory) => {
       res.json(dbInventory);
     });
@@ -70,7 +70,7 @@ module.exports = (app) => {
     );
   });
   // route to input the total from "shopping cart" and inputs it into Cart table
-  app.post("/api/carts", (req, res) => {
+  app.post("/api/cart", (req, res) => {
     console.log(req.body);
     db.Cart.create({
       total: req.body.total,
