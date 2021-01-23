@@ -4,9 +4,7 @@ branches:
   only:
     - master
     - main
-cache:
-  directories:
-    - node_modules
+
 services:
   - mysql
 before_install:
