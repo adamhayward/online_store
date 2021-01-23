@@ -2,46 +2,78 @@
 /* ______________________________________________________________ */
 /* navbar & nav component styling */
 nav {
-    min-height: 100px;
-    margin-bottom: 20px;
-    border-bottom: 3px solid black;
-  }
-  /* logo styling */
-  #logo {
-    font-size: 48px;
-  }
-  /* RED text in logo*/
-  .logoRed, button {
-    color: red;
-  }
-  .nav-link {
-    color: black;
-  }
-  .nav-link:hover {
-    color: red;
-    text-shadow: 0 2px 2px lightgray;
-  }
-  /* formats content section to take up 100% of screen minus space designated for nav & footer elements */
-  .content {
-    min-height: calc(100vh - 220px);
-  }
-  /* page title */
-  h3 {
-    margin-top: 10px;
-    height: 75px;
-    text-align: center;
-  }
-  /* placeholder for specific content for each page */
-  #mainContent  {
-    height: calc(100vh - 300px);
-    border: solid 3px black
-  }
-  /* TODO reformat footer text for better appearance */
-  footer {
-    height: 100px;
-    text-align: center;
-    color: white;
-    background-color: #222;
-    margin-top: 20px;
-  }
-  
+  min-height: 100px;
+  margin-bottom: 20px;
+  border-bottom: 3px solid black;
+}
+
+
+/* logo styling */
+#logo {
+  font-size: 48px;
+}
+
+
+#price{
+  margin-right: 10px;
+}
+
+
+/* RED text in logo*/
+.logoRed,
+button {
+  color: red;
+}
+
+
+.nav-link {
+  color: black;
+}
+
+
+.nav-link:hover {
+  color: red;
+  text-shadow: 0 2px 2px lightgray;
+}
+
+
+.card{
+  padding: 20px;
+}
+
+
+/* formats content section to take up 100% of screen minus space designated for nav & footer elements */
+.content {
+  min-height: calc(100vh - 220px);
+}
+
+.pay-btn{
+  margin-left: 40%;
+}
+
+
+
+/* page title */
+h3 {
+  margin-top: 10px;
+  height: 75px;
+  text-align: center;
+}
+
+
+/* placeholder for specific content for each page */
+#mainContent {
+  height: calc(100vh - 260px);
+  border: solid 3px black;
+  padding: 2%;
+}
+
+
+/* TODO reformat footer text for better appearance */
+footer {
+  height: 100px;
+  text-align: center;
+  color: white;
+  background-color: #222;
+  margin-top: 20px;
+}
