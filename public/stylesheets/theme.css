@@ -1,6 +1,10 @@
 /* This style sheet holds overall page website theme for all pages*/
 /* ______________________________________________________________ */
 /* navbar & nav component styling */
+
+body, html {
+  width: 100%;
+}
 nav {
   min-height: 100px;
   margin-bottom: 20px;
@@ -67,7 +71,6 @@ h3 {
   border: solid 3px black;
   padding: 2%;
 }
-
 
 /* TODO reformat footer text for better appearance */
 footer {
