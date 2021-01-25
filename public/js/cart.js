@@ -22,4 +22,5 @@ getTotal();
 
 orderNowBtn.on("click", (event) => {
   event.preventDefault();
+  location.replace("/orderform")
 });
