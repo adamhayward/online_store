@@ -1,13 +1,39 @@
-const cartBtn = $("#addCart");
+const cartBtn1 = $("#addCart1");
+const cartBtn2 = $("#addCart2");
+const cartBtn3 = $("#addCart3");
 
 let item1 = $("#item1").html();
 let price1 = $("#price1").html();
 
+let item2 = $("#item2").html();
+let price2 = $("#price2").html();
+
+let item3 = $("#item3").html();
+let price3 = $("#price3").html();
+
+
+
 // onlick for button
-cartBtn.on("click", (event) => {
+cartBtn1.on("click", (event) => {
   event.preventDefault();
-  console.log(app);
-  let item = app;
+ 
+  var addApp = {
+    item: item1,
+    price: price1,
+  
+  }
+  console.log(addApp);
+  sumbitItem(addApp);
+});
+cartBtn2.on("click", (event) => {
+  event.preventDefault();
+  console.log(app2);
+  
+});
+cartBtn3.on("click", (event) => {
+  event.preventDefault();
+  console.log(app3);
+  
 });
 
 function Card(item, price) {
@@ -15,46 +41,13 @@ function Card(item, price) {
   this.price = price;
 }
 
-const cards = $("#cards").children(".card-col");
-const card = cards.children(".card");
-const cardBody = card.children(".card-body");
+const app1 = new Card(item1, price1);
+const app2 = new Card(item2, price2);
+const app3 = new Card(item3, price3);
 
-const cardItem = cardBody.children("h5");
-const cardPrice = cardBody.children("a");
-const cardButton = cardBody.children("button");
 
-var cardItems = [];
-function getItems() {
-  for (let i = 0; i < cardItem.length; i++) {
-    cardItems.push(`card-${[i + 1]}`);
-  }
 
-  // if (cardItem[i]) {
-  // cardItem.addClass(`card-${[i + 1]}`);
-  //   cardItems.push(cardItem[i]);
-  // }
-  console.log(cardItems);
-  return cardItems;
-}
-getItems();
-
-function assignClass() {
-  for (let i = 0; i < cardItems.length; i++) {
-   const cardNum = cardItems[i];
-
-    console.log(cardNum);
-    console.log(cardItem);
-  
-  }
-
-}
-assignClass();
-
-// console.log(cardItem)
-
-// const cardData = cards.children(".card-body");
-for (let i = 0; i < cards; i++) {
-  console.log(cardData[i]);
+function sumbitItem(item) {
+  $.post("/api/cart", item).then()
 }
 
-const app = new Card(item1, price1);
