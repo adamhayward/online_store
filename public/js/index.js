@@ -1,53 +1,60 @@
-const cartBtn1 = $("#addCart1");
-const cartBtn2 = $("#addCart2");
-const cartBtn3 = $("#addCart3");
+$(document).ready(() => {
+  const mainContent = $("#cards");
 
-let item1 = $("#item1").html();
-let price1 = $("#price1").html();
+  const button = $("#addCart1");
+  button.on("click", () => createItemCard());
 
-let item2 = $("#item2").html();
-let price2 = $("#price2").html();
+  getInventory();
 
-let item3 = $("#item3").html();
-let price3 = $("#price3").html();
+  function createItemCard(itemData) {
+    //   refenceing HTML elements to structer a new card element
+    let newImg = $("<img>").addClass("card-img-top");
+    let newH5 = $("<h5>").addClass("card-title");
+    let newPEl = $("<p>").addClass("card-text");
+    let newAEl = $("<a>");
+    let newBttn = $("<button>").addClass("btn");
+    // building new card element
+    let img = newImg.attr("src", itemData.imageURL);
 
+    let newCardData = $("<div>")
+      .addClass("card-body")
+      .append(
+        newH5.append(itemData.item),
+        newPEl.append(itemData.description),
+        newAEl.append(itemData.price),
+        newBttn.append("Add To Cart")
+      );
+    let newCard = $("<div>")
+      .addClass("card")
+      .css("width", "18rem")
+      .append(img, newCardData);
 
-
-// onlick for button
-cartBtn1.on("click", (event) => {
-  event.preventDefault();
- 
-  var addApp = {
-    item: item1,
-    price: price1,
-  
+    let newCol = $("<div>").addClass("col-lg-4 col-md-6 card-col")
+    .append(newCard);
+    // getInventory(newCard);
+    mainContent.append(newCol);
   }
-  console.log(addApp);
-  sumbitItem(addApp);
+
+  // get request to pull data from "ionventory" table
+  function getInventory() {
+    $.get("/api/inventory", (data) => {
+      let cardToAdd = [];
+      for (let i = 0; i < data.length; i++) {
+        cardToAdd.push(createItemCard(data[i]));
+        console.log(data);
+        console.log(cardToAdd);
+      }
+      renderItemCard(cardToAdd);
+      console.log(cardToAdd);
+    });
+  }
+
+  function renderItemCard(card) {
+    if (card.length) {
+      console.log(card);
+      mainContent.append(card);
+    } else {
+      console.log("nope");
+    }
+  }
 });
-cartBtn2.on("click", (event) => {
-  event.preventDefault();
-  console.log(app2);
-  
-});
-cartBtn3.on("click", (event) => {
-  event.preventDefault();
-  console.log(app3);
-  
-});
-
-function Card(item, price) {
-  this.item = item;
-  this.price = price;
-}
-
-const app1 = new Card(item1, price1);
-const app2 = new Card(item2, price2);
-const app3 = new Card(item3, price3);
-
-
-
-function sumbitItem(item) {
-  $.post("/api/cart", item).then()
-}
-
