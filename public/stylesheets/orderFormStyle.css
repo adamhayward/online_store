@@ -1,6 +1,13 @@
 #buyNowBtn {
     width: 90%;
-    background-color: red;
-    border: black;
+    background-color: #EF0107;
     width: 100%;
+}
+.input-group-text{
+    background-color: transparent;
+    color: #C0C0C0
+}
+
+.form-control{
+    background-color: transparent;
 }

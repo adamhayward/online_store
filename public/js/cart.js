@@ -4,6 +4,7 @@ const orderNowBtn = $("#order-now-btn");
 
 
 
+
 const getTotal = () => {
   const price1 = $("#price1").html();
   const price2 = $("#price2").html();
@@ -24,3 +25,20 @@ orderNowBtn.on("click", (event) => {
   event.preventDefault();
   location.replace("/orderForm")
 });
+
+
+
+import { init } from 'ityped'
+  
+const oneElement = document.querySelector('#one')
+
+init(oneElement, { showCursor: true, 
+  strings: ['example', 'text', 'thank', 'for', 'shopping', 'here'], 
+  typeSpeed:  100, 
+  backSpeed:  50, 
+  startDelay: 500, 
+  backDelay:  500, 
+  loop: true, 
+  cursorChar: "|", 
+  placeholder: true});
+
