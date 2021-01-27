@@ -24,5 +24,13 @@ module.exports = (sequelize, DataTypes) => {
       //TODO valiated format with $ and .
     },
   });
+  // return Inventory;
+  Inventory.associate = function(models) {
+    Inventory.hasMany(models.Cart, {
+      onDelete: "cascade"
+    });
+  };
   return Inventory;
 };
+
+

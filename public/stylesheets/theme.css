@@ -1,57 +1,58 @@
 /* This style sheet holds overall page website theme for all pages*/
 /* ______________________________________________________________ */
 /* navbar & nav component styling */
+
+body,
+html {
+  width: 100%;
+}
 nav {
   min-height: 100px;
   margin-bottom: 20px;
   border-bottom: 3px solid black;
 }
 
-
 /* logo styling */
 #logo {
   font-size: 48px;
 }
-
-
-#price{
+#price {
   margin-right: 10px;
 }
 
-
 /* RED text in logo*/
-.logoRed,
-button {
+.logoRed {
   color: red;
 }
 
+.btn,
+.btn:hover {
+  background-color: red;
+  color: white;
+  border: solid 1px black;
+}
 
 .nav-link {
   color: black;
 }
-
 
 .nav-link:hover {
   color: red;
   text-shadow: 0 2px 2px lightgray;
 }
 
-
-.card{
+.card {
   padding: 20px;
 }
-
 
 /* formats content section to take up 100% of screen minus space designated for nav & footer elements */
 .content {
   min-height: calc(100vh - 220px);
 }
 
-.pay-btn{
+.pay-btn {
   margin-left: 40%;
 }
-
-
 
 /* page title */
 h3 {
@@ -60,14 +61,12 @@ h3 {
   text-align: center;
 }
 
-
 /* placeholder for specific content for each page */
 #mainContent {
   height: calc(100vh - 260px);
   border: solid 3px black;
   padding: 2%;
 }
-
 
 /* TODO reformat footer text for better appearance */
 footer {

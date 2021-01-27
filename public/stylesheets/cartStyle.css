@@ -1,0 +1,16 @@
+.table {
+  position: relative;
+  left: 20%;
+  width: calc(80% - 50px); 
+}
+#order-now-btn {
+  width: 90%;
+  background-color: red;
+  border: black;
+  width: 100%;
+}
+
+#total {
+    position: relative;
+    left: -33.33%;
+}
