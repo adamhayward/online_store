@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- TODO fix responsiveness for product cards -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,14 +23,11 @@
             <!-- collapsed navbar -->
             <div class="collapse navbar-collapse" id="navCollapse">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                    <li>
+                        <a class="nav-link" href="index.html">Store</a>
                     </li>
                     <li>
-                        <a class="nav-link" href="#">Store</a>
-                    </li>
-                    <li>
-                        <a class="nav-link" href="#">Cart</a>
+                        <a class="nav-link" href="cart.html">Cart</a>
                     </li>
                 </ul>
             </div>
@@ -41,43 +38,12 @@
         <!-- row 1 (Page Title)-->
         <div class="row">
             <div class="col-12">
-                <h3>Your Cart</h3>
+                <h3>Store</h3>
             </div>
         </div>
         <!-- row 2 (Main content for page)-->
-        <div class="row" id="mainContent">
-            <div class="col align-self-center">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Item</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Extra</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Website 1</td>
-                            <td>$300.00</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>Website 2</td>
-                            <td>$300.00</td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Website 3</td>
-                            <td>$300.00</td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+        <div id="cards" class="row align-items-center">
+                    <!-- cards automatically printed to page HERE based on data from MYSQL "Inventory" table -->
         </div>
     </div>
 
@@ -90,6 +56,7 @@
         </div>
     </footer>
     <!-- refences to js scripts from bootstrap CDN -->
+   
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -99,6 +66,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
+        <script src="./js/index.js"></script>
+        <script src="https://code.jquery.com/jquery.js"></script>
 </body>
 
 </html>
