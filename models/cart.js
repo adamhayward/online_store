@@ -1,9 +1,15 @@
 module.exports = (sequelize, DataTypes) => {
     const Cart = sequelize.define("Cart", {
       // proceeding to define cols:
-      total: {
-        type: DataTypes.FLOAT,
-        allowNull: false,
-    }});
+      item: DataTypes.STRING,
+      price: DataTypes.FLOAT,
+  });
+  Cart.associate = function(models) {
+    Cart.belongsTo(models.Inventory, {
+      foreignKey: {
+        allowNull: true
+      }
+    })
+  }
     return Cart;
   };

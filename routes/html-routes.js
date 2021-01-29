@@ -5,7 +5,6 @@ const path = require("path");
 
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
-const db = require("../models");
 
 module.exports = (app) => {
   app.get("/", (req, res) => {
