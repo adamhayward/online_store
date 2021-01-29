@@ -1,55 +1,76 @@
-    <div class="container content">
-        <!-- row 1 (Page Title)-->
-        <div class="row">
-            <div class="col-12">
-                <h3 class= "page-title">Cart</h3>
-            </div>
-        </div>
-        <!-- row 2 (Main content for page)-->
-        <div class="row">
-            <div class="col-12 align-self-center">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th class = "cart-text" scope="col">Item</th>
-                            <th class = "cart-text" scope="col">Price</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class = "cart-text" id="item1">Website 1</td>
-                            <td class = "cart-text" id="price1">$500.00</td>
-                        </tr>
-                        <tr>
-                            <td class = "cart-text" id="item2">Website 2</td>
-                            <td class = "cart-text" id="price2">$300.00</td>
-                        </tr>
-                        <tr>
-                            <td class = "cart-text" id="item3">Website 3</td>
-                            <td class = "cart-text" id="price3">$600.00</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <!-- row 3 -->
-        <div class="row">
-            <!-- "your total is" text  -->
-            <div class="col-4 offset-sm-2">
-                <h4 class = "cart-text">Your Total is: ${{total}} </h4>
-            </div>
-            <!-- printed total / total pushed to "Cart" table -->
-            <div class="col-4 offset-sm-2">
-                <h4 id="total"></h4>
-            </div>
-        </div>
-        <div class="row ityped-cursor">
-            <h4><span id="one"></span></h4>
-        </div>
-        <!-- row 4 -->
-        <div class="row">
-            <div class="col-8 offset-sm-2">
-                <button id="order-now-btn" class=" cart-btn btn btn-primary">Order Now</button>
-            </div>
+<div class="container content">
+    <!-- row 1 (Page Title)-->
+    <div class="row">
+        <div class="col-12">
+            <h3 class="page-title">Cart</h3>
         </div>
     </div>
+    <!-- row 2 (Main content for page)-->
+    <div class="row">
+        <div class="col-12 align-self-center">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="cart-text" scope="col">Item</th>
+                        <th class="cart-text" scope="col">Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="cart-text" id="item1">Website 1</td>
+                        <td class="cart-text" id="price1">$500.00</td>
+                    </tr>
+                    <tr>
+                        <td class="cart-text" id="item2">Website 2</td>
+                        <td class="cart-text" id="price2">$300.00</td>
+                    </tr>
+                    <tr>
+                        <td class="cart-text" id="item3">Website 3</td>
+                        <td class="cart-text" id="price3">$600.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- row 3 -->
+    <div class="row">
+        <!-- "your total is" text  -->
+        <div class="col-4 offset-sm-2">
+            <h4 class="cart-text">Your Total is: ${{total}} </h4>
+        </div>
+        <!-- printed total / total pushed to "Cart" table -->
+        <div class="col-4 offset-sm-2">
+            <h4 id="total"></h4>
+        </div>
+    </div>
+    <div class="row ityped-cursor">
+        <h4><span id="one"></span></h4>
+    </div>
+    <!-- row 4 -->
+    <div class="row">
+        <div class="col-8 offset-sm-2">
+            <button id="order-now-btn" class=" cart-btn btn btn-primary">Order Now</button>
+        </div>
+    </div>
+</div>
+<footer>
+    <!-- row 1 -->
+    <div class="row">
+        <div class="col-4 offset-4 mt-2">
+            <h6>Designed and Coded By:<br>&lt;team><span class="logoRed">RED</span></h6>
+        </div>
+    </div>
+</footer>
+<!-- refences to js scripts from bootstrap CDN -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="./js/cart.js"></script>

@@ -44,27 +44,3 @@ orderNowBtn.on("click", (event) => {
   event.preventDefault();
   location.replace("/orderForm")
 });
-
-
-
-const thanksMessage = () => {
-  
-  import { init } from 'ityped'
-  
-const oneElement = document.querySelector('#one')
-
-init(oneElement, { 
-  showCursor: true, 
-  strings: ['example', 'text', 'thank', 'for', 'shopping', 'here'], 
-  typeSpeed:  100, 
-  backSpeed:  50, 
-  startDelay: 500, 
-  backDelay:  500, 
-  loop: true, 
-  cursorChar: "|", 
-  placeholder: true});
-
-  $(oneElement).html(strings[i]);
-};
-
-thanksMessage();

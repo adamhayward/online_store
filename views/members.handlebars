@@ -1,46 +1,66 @@
-    <!-- main content  -->
-    <div class="container content">
-        <!-- row 1 (Page Title)-->
-        <div class="row">
-            <div class="col-12">
-                <h3 class= "page-title">Store</h3>
-            </div>
-        </div>
-        <!-- row 2 (Main content for page)-->
-        <div id="cards" class="row align-items-center">
-            <div class="col-lg-4 col-md-6 card-col">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://iili.io/f3qPte.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 id="item1" class="card-text-style card-title">{{item}}</h5>
-                        <p class="card-text-style card-text">{{description}}</p>
-                        <a class="card-text-style" id= "price1">${{price}}</a>
-                        <button id="addCart1" class=" btn-style btn">Add to cart</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 card-col">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://iili.io/f3q16v.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 id="item2" class="card-text-style card-title"{{item}}</h5>
-                        <p class="card-text-style card-text">{{description}}</p>
-                        <a class="card-text-style" id= "price2">${{price}}</a>
-                        <button id="addCart2" class=" btn-style btn">Add to cart</button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 card-col">
-                <div class="card" style="width: 18rem;">
-                    <img src="https://iili.io/f3frQa.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 id="item3" class="card-text-style card-title"{{item}}</h5>
-                        <p class="card-text-style card-text">{{description}}</p>
-                        <a class="card-text-style" id= "price3">${{price}}</a>
-                        <button  id="addCart3" class=" btn-style btn">Add to cart</button>
-                    </div>
-                </div>
-            </div>
-
+<!-- main content  -->
+<div class="container content">
+    <!-- row 1 (Page Title)-->
+    <div class="row">
+        <div class="col-12">
+            <h3 class="page-title">Store</h3>
         </div>
     </div>
+    <!-- row 2 (Main content for page)-->
+    <div id="cards" class="row align-items-center">
+        <div class="col-lg-4 col-md-6 card-col">
+            <div class="card" style="width: 18rem;">
+                <img src="https://iili.io/f3qPte.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 id="item1" class="card-text-style card-title">{{item}}</h5>
+                    <p class="card-text-style card-text">{{description}}</p>
+                    <a class="card-text-style" id="price1">${{price}}</a>
+                    <button id="addCart1" class=" btn-style btn">Add to cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 card-col">
+            <div class="card" style="width: 18rem;">
+                <img src="https://iili.io/f3q16v.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 id="item2" class="card-text-style card-title" {{item}}</h5>
+                        <p class="card-text-style card-text">{{description}}</p>
+                        <a class="card-text-style" id="price2">${{price}}</a>
+                        <button id="addCart2" class=" btn-style btn">Add to cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 card-col">
+            <div class="card" style="width: 18rem;">
+                <img src="https://iili.io/f3frQa.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 id="item3" class="card-text-style card-title" {{item}}</h5>
+                        <p class="card-text-style card-text">{{description}}</p>
+                        <a class="card-text-style" id="price3">${{price}}</a>
+                        <button id="addCart3" class=" btn-style btn">Add to cart</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<footer>
+    <div class="row">
+        <div class="col-4 offset-4 mt-2">
+            <h6>Designed and Coded By:<br>&lt;team><span class="logoRed">RED</span></h6>
+        </div>
+    </div>
+</footer>
+<!-- refences to js scripts from bootstrap CDN -->
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="./js/members.js"></script>
