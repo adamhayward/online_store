@@ -36,7 +36,7 @@ $(document).ready(() => {
     mainContent.append(newCol);
   }
 
-  // get request to pull data from "ionventory" table
+  // get request to pull data from "inventory" table
   function getInventory() {
     $.get("/api/inventory", (data) => {
       let cardToAdd = [];

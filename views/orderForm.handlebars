@@ -1,0 +1,130 @@
+    </nav>
+    <!-- main content  -->
+    <div id="mainContent" class="container">
+        <!-- row 1 (Page Title)-->
+        <div class="row">
+            <div class="col-12">
+                <h3 class= "page-title">Order Form</h3>
+            </div>
+        </div>
+        <!-- row 2 (Main content for page)-->
+        <div class="row">
+            <div class="col-md-6 mt-3">
+                <div class="input-group flex-nowrap">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">{{firstName}}</span>
+                    </div>
+                    <input type="text" aria-label="firstName" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-6 mt-3">
+                <div class="input-group flex-nowrap">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">{{lastName}}</span>
+                    </div>
+                    <input type="text" aria-label="lastName" class="form-control">
+                </div>
+            </div>
+
+        </div>
+        <!-- row 3 -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="input-group flex-nowrap mt-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping"> Billing Address</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="" aria-label="billingAddress"
+                        aria-describedby="addon-wrapping">
+                </div>
+            </div>
+        </div>
+        <!-- row 4 -->
+        <div class="row">
+            <div class="col-md-4 mt-3">
+                <div class="input-group flex-nowrap">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">{{city}}</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="" aria-label="city"
+                        aria-describedby="addon-wrapping">
+                </div>
+            </div>
+            <div class="col-md-4 mt-3">
+                <div class="input-group flex-nowrap">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">{{state}}</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="" aria-label="state"
+                        aria-describedby="addon-wrapping">
+                </div>
+            </div>
+            <div class="col-md-4 mt-3">
+                <div class="input-group flex-nowrap">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">{{zipCode}}</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="" aria-label="zipCode"
+                        aria-describedby="addon-wrapping">
+                </div>
+            </div>
+        </div>
+        <!-- row 5 -->
+        <div class="row">
+            <div class="col-md-3 mt-3">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">{{ccBrand}}</button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Visa</a>
+                            <a class="dropdown-item" href="#">Master Card</a>
+                            <a class="dropdown-item" href="#">American Express</a>
+                        </div>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                </div>
+            </div>
+            <div class="col-md-9 mt-3">
+                <div class="input-group flex-nowrap">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">{{ccNum}}</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="" aria-label="city"
+                        aria-describedby="addon-wrapping">
+                </div>
+            </div>
+        </div>
+        <!-- row 6 -->
+        <div class="row">
+            <div class="col-md-6 mt-3">
+                <div class="input-group flex-nowrap">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">{{ccExpirationDate}}</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="" aria-label="expirationDate"
+                        aria-describedby="addon-wrapping">
+                </div>
+            </div>
+            <div class="col-md-6 mt-3">
+                <div class="input-group flex-nowrap">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="addon-wrapping">{{ccCVV}}</span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="" aria-label="ccv#"
+                        aria-describedby="addon-wrapping">
+                </div>
+            </div>
+        </div>
+        <!-- row 7 -->
+        <div class="row">
+            <div class="col">
+
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col mt-3">
+                <button id="buyNowBtn" class="btn btn-danger">Buy Now</button>
+            </div>
+        </div>
+    </div>

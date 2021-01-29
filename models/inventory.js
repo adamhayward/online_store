@@ -3,26 +3,26 @@ module.exports = (sequelize, DataTypes) => {
   const Inventory = sequelize.define("Inventory", {
     // proceeding to define cols:
     imageURL: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING
       //TODO: populate default value with no img found URL
       // defualtValue: ""
     },
     item: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     description: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [1, 255],
-      },
+        len: [1, 255]
+      }
     },
     price: {
       type: DataTypes.DECIMAL,
-      allowNull: false,
+      allowNull: false
       //TODO valiated format with $ and .
-    },
+    }
   });
   // return Inventory;
   Inventory.associate = function(models) {
@@ -32,5 +32,3 @@ module.exports = (sequelize, DataTypes) => {
   };
   return Inventory;
 };
-
-

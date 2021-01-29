@@ -7,65 +7,65 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [1, 30],
-      },
+        len: [1, 30]
+      }
     },
     lastName: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [1, 30],
-      },
+        len: [1, 30]
+      }
     },
     streetAddress: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     city: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [1, 30],
-      },
+        len: [1, 30]
+      }
     },
     state: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [2],
-      },
+        len: [2]
+      }
     },
     zipCode: {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
-        len: [5, 11],
-      },
+        len: [5, 11]
+      }
     },
     //TODO ensuer data is form 'drop down' with presets
     ccBrand: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     ccNum: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
-        len: [16],
-      },
+        len: [16]
+      }
     },
     //TODO validate correct date format
     ccExpirationDate: {
       type: DataTypes.DATE,
-      allowNull: false,
+      allowNull: false
     },
     ccCVV: {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
-        len: [3],
-      },
-    },
+        len: [3]
+      }
+    }
   });
   return Order;
 };
