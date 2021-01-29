@@ -5,6 +5,7 @@ const orderNowBtn = $("#order-now-btn");
 
 
 
+
 const getTotal = () => {
   const price1 = $("#price1").html();
   const price2 = $("#price2").html();
@@ -28,11 +29,14 @@ orderNowBtn.on("click", (event) => {
 
 
 
-import { init } from 'ityped'
+const thanksMessage = () => {
+  
+  import { init } from 'ityped'
   
 const oneElement = document.querySelector('#one')
 
-init(oneElement, { showCursor: true, 
+init(oneElement, { 
+  showCursor: true, 
   strings: ['example', 'text', 'thank', 'for', 'shopping', 'here'], 
   typeSpeed:  100, 
   backSpeed:  50, 
@@ -42,3 +46,7 @@ init(oneElement, { showCursor: true,
   cursorChar: "|", 
   placeholder: true});
 
+  $(oneElement).html(strings[i]);
+};
+
+thanksMessage();
