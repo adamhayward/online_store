@@ -4,6 +4,7 @@ const path = require("path");
 
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
+const { is } = require("sequelize/types/lib/operators");
 
 module.exports = function(app) {
   app.get("/", (req, res) => {
@@ -31,11 +32,22 @@ module.exports = function(app) {
     //res.sendFile(path.join(__dirname, "../public/members.html"));
   });
 
-  app.get("/cart", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/cart.html"));
+  app.get("/cart", isAuthenticated, (req, res) => {
+    res.render("cart", {title: "Express"});
   });
 
-  app.get("/orderform", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/orderForm.html"));
+  app.get("/order", isAuthenticated, (req, res) => {
+    res.render("order", {title: "Express"});
   });
+
+
+
+
+  //app.get("/cart", (req, res) => {
+  //  res.sendFile(path.join(__dirname, "../public/cart.html"));
+  //});
+
+  //app.get("/orderform", (req, res) => {
+  //  res.sendFile(path.join(__dirname, "../public/orderForm.html"));
+  //});
 };

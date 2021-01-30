@@ -5,6 +5,8 @@ const session = require("express-session");
 const passport = require("./config/passport");
 // const { sequelize } = require("./models");
 
+const exphbs = require("express-handlebars");
+
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 8080;
 
@@ -16,7 +18,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static("public"));
 
-app.set("view engine", "ejs");
+app.engine("handlebars", exphbs({
+  defaultLayout: "main"
+}));
+app.set("view engine", "handlebars");
+
+
 // We need to use sessions to keep track of our user's login status
 app.use(
   session({ secret: "keyboard cat", resave: true, saveUninitialized: true })
