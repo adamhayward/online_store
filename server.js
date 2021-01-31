@@ -28,6 +28,7 @@ require("./routes/api-routes.js")(app);
 require("./routes/inventory-api-routes.js")(app);
 require("./routes/cart-api-routes.js")(app);
 require("./routes/order-api-routes.js")(app);
+require("./routes/total-api-routes.js")(app);
 
 // Syncing our database and logging a message to the user upon success
 db.sequelize.sync({ force: true }).then(() => {
