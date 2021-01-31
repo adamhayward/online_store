@@ -64,14 +64,8 @@ $(document).ready(() => {
     let itemData = $(this).parent("div").data("item");
     let id = itemData.id;
     $.ajax({
-      method: "get",
+      method: "Post",
       url: `/api/cart/${id}`,
     })
-    // .then(
-    //   $.ajax({
-    //     method: "post",
-    //     url: `/api/cart/${id}`,
-    //   })
-    // );
   }
 });

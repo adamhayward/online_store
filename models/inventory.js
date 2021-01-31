@@ -25,12 +25,10 @@ module.exports = (sequelize, DataTypes) => {
     },
   });
   // return Inventory;
-  Inventory.associate = function(models) {
+  Inventory.associate = function (models) {
     Inventory.hasMany(models.Cart, {
-      onDelete: "cascade"
+      onPost: "cascade",
     });
   };
   return Inventory;
 };
-
-
